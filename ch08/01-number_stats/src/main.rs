@@ -11,7 +11,7 @@ fn main() {
     println!("Mode is: {}", mode(&numbers));
 }
 
-fn mean(vec: &Vec<i32>) -> i32 {
+fn mean(vec: &[i32]) -> i32 {
     let mut a: i32 = 0;
 
     for i in vec.iter() {
@@ -21,14 +21,14 @@ fn mean(vec: &Vec<i32>) -> i32 {
     a / vec.len() as i32
 }
 
-fn median(vec: &Vec<i32>) -> i32 {
-    let mut v = vec.clone();
+fn median(vec: &[i32]) -> i32 {
+    let mut v = Vec::from(vec);
     v.sort();
 
     v[v.len() / 2 - 1]
 }
 
-fn mode(vec: &Vec<i32>) -> i32 {
+fn mode(vec: &[i32]) -> i32 {
     let mut mode = HashMap::new();
 
     for i in vec.iter() {

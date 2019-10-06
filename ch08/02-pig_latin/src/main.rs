@@ -1,7 +1,9 @@
+// Critiques received: I split then reallocate making a Vec when I could iterate on a String itself. 
+
 fn main() {
     let hello = String::from("hello world what a beautiful day it is");
 
-    let split = hello.split(" ");
+    let split = hello.split(' ');
 
     let vec = split.collect::<Vec<&str>>();
 

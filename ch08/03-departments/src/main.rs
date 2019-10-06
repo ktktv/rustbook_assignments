@@ -45,8 +45,7 @@ fn add_x_to_dep(map: &mut HashMap<String, String>) {
         .expect("Failed to read the line");
     let key = input.trim().to_string();
 
-    input = String::new();
-
+    input.clear();
     println!("Enter the department: ");
 
     io::stdin()
